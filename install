@@ -34,13 +34,17 @@ choose_type() {
 read -p "Would you like to setup a server or standard install? " installtype
 case $installtype in
   server) 
+    echo "type: server" > ./vars/vars
     ansible-pull -U https://github.com/qwertimer/ansible_configurator server.yml
     ;;
   standard)
+
+    echo "type: standard" > ./vars/vars
     ansible-pull -U https://github.com/qwertimer/ansible_configurator standard.yml  > /dev/null
     ;;
 
-  test) 
+  test)
+    echo "type: test" > ./vars/vars
     ansible-pull --ask-become-pass -U https://github.com/qwertimer/ansible_configurator test.yml
     ;;
 esac
