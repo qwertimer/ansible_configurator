@@ -1,3 +1,4 @@
+python
 - hosts: localhost
   connection: local
   become: true
@@ -12,10 +13,9 @@
 
     - include: tasks/ansible_user.yml
     - include: tasks/cron.yml
-    - include: tasks/packages.yml
-    - include: tasks/git.yml
-    - include: tasks/dot.yml
+    - include: tasks/docker.yml
+    - include: tasks/docker_serve.yml
 
   tags:
-    - standard
+    - server
 

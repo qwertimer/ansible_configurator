@@ -1,6 +1,5 @@
-vars_files:
-  - ./vars/vars.yml
 tasks:
+  - include_vars: ./vars/vars.yml
   - name: Create directory for personal repos
     ansible.builtin.file:
       path: "{{ REPO_BASE }}/{{ pers }}"
