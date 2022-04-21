@@ -41,7 +41,7 @@ case $installtype in
     ;;
 
   test) 
-    ansible-pull -U https://github.com/qwertimer/ansible_configurator -t "test" 
+    ansible-pull -U https://github.com/qwertimer/ansible_configurator test.yml
     ;;
 esac
 }
