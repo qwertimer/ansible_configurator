@@ -1,9 +1,10 @@
-pre_tasks:
+---
+- pre_tasks:
   - name: update repositories
     ansible.builtin.package:
       update_cache: yes
     changed_when: False
 
-tags:
+- tags:
   - test 
 
