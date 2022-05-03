@@ -1,4 +1,3 @@
-python
 - hosts: localhost
   connection: local
   become: true
